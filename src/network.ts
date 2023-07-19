@@ -64,7 +64,7 @@ export interface HyperledgerFabricNetworkProps {
    */
   readonly memberName: string;
 
-  /**
+  /**F
    * Managed Blockchain member description
    *
    * @default - Set to match member name
@@ -323,7 +323,7 @@ export class HyperledgerFabricNetwork extends constructs.Construct {
     const passwordRequirements = {
       passwordLength: 32,
       requireEachIncludedType: true,
-      excludeCharacters: '\'"/\\@ &{}<>*|',
+      excludeCharacters: '\'"/\\@ &{}<>*|?,][;#)($=!*^-!~:`_.',
     };
     this.adminPasswordSecret = new secretsmanager.Secret(this, 'AdminPassword', { generateSecretString: passwordRequirements });
 
