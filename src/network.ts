@@ -64,7 +64,7 @@ export interface HyperledgerFabricNetworkProps {
    */
   readonly memberName: string;
 
-  /**F
+  /**
    * Managed Blockchain member description
    *
    * @default - Set to match member name
